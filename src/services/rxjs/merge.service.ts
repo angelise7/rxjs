@@ -19,9 +19,9 @@ export class MergeService {
     //     console.log(r)
     //   });
 
-    // const merge$ = merge(source1$, source2$, source3$, 2);
-    // merge$.subscribe(r => {
-    //   console.log(r)
-    // })
+    const merge$ = merge(source1$, source2$, source3$, 2);
+    merge$.subscribe(r => {
+      console.log(r)
+    })
   }
 }

@@ -10,3 +10,4 @@ export * from './defer.service';
 export * from './concat.service';
 export * from './merge.service';
 export * from './zip.service';
+export * from './combine-latest.service';

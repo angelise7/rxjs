@@ -98,6 +98,13 @@ export const COMBINATION_OPERATOR: Array<OPERATOR> = [{
   fun: 'zip(observable1$,observable12$,...)/observable1$.zip(observable2$,...)',
   introduce: '',
   operation: false,
+}, {
+  name: 'combineLatest',
+  type: '动态/静态',
+  value: '吐出当前所有Observable的最新数据,某个Observable没有新数据产生时,拿取最后一个(同步数据合并时请看Service注释)',
+  fun: 'combineLatest(observable1$,observable12$,...)/observable1$.combineLatest(observable2$,...)',
+  introduce: '',
+  operation: false,
 }]
 
 export interface OPERATOR {

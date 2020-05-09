@@ -12,7 +12,7 @@ export class ConcatService {
     const source2$ = of(4, 5, 6);
 
     const concat$ = source1$.pipe(
-      concat(source2$, source2$)
+      concat(source2$)
     ).subscribe(r => {
       console.log(r)
     });
