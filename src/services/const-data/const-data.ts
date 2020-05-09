@@ -1,4 +1,4 @@
-export const CREATE_OPERATOR = [{
+export const CREATE_OPERATOR: Array<OPERATOR> = [{
   name: 'create',
   type: '静态',
   value: '直接调用Observable构造函数',
@@ -64,11 +64,33 @@ export const CREATE_OPERATOR = [{
 }, {
   name: 'ajax',
   type: '',
+  value: '',
+  fun: 'ajax(config)',
+  introduce: '',
+  operation: true,
 }, {
   name: 'defer',
-  type: '',
+  type: '静态',
   value: '单纯的创建一个Observable,只有被订阅时,才会去创建占用资源的Observable',
   fun: 'defer(x)',
   introduce: 'x:一个返回Observable的函数',
   operation: true,
 }]
+
+export const COMBINATION_OPERATOR: Array<OPERATOR> = [{
+  name: 'concat',
+  type: '动态/静态',
+  value: '合并多个数据流,有静态和动态两个操作符,可以无限拼接,只有在上一个Observable完结才能拼接',
+  fun: '',
+  introduce: '',
+  operation: false,
+}]
+
+export interface OPERATOR {
+  name: string;
+  type: string;
+  value: string;
+  fun: string;
+  introduce: string;
+  operation: boolean
+}

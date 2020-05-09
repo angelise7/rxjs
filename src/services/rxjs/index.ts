@@ -7,3 +7,4 @@ export * from './interval-timer.service';
 export * from './from.service';
 export * from './ajax.service';
 export * from './defer.service';
+export * from './concat.service';

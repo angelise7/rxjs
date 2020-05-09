@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CREATE_OPERATOR } from '../services/const-data/const-data'
+import { CREATE_OPERATOR, COMBINATION_OPERATOR, OPERATOR } from '../services/const-data/const-data'
 import {
   OfService,
   RangeService,
@@ -9,6 +9,7 @@ import {
   IntervalTimerService,
   FromService,
   DeferService,
+  ConcatService,
 } from '../services/rxjs'
 
 @Component({
@@ -18,19 +19,20 @@ import {
 })
 export class AppComponent {
 
-  createOperator = CREATE_OPERATOR;
+  createOperator: Array<OPERATOR> = CREATE_OPERATOR;
+  combinationOperator: Array<OPERATOR> = COMBINATION_OPERATOR;
 
   constructor(
-    private deferService: DeferService,
+    private concatService: ConcatService,
   ) {
   }
 
   ngOnInit(): void {
   }
 
-  handleOperation() {
-    this.deferService.operation().subscribe(r => {
-      console.log(r)
-    })
+  handleOperation(): void {
+    // this.deferService.operation().subscribe(r => {
+    //   console.log(r)
+    // })
   }
 }
