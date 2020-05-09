@@ -8,3 +8,4 @@ export * from './from.service';
 export * from './ajax.service';
 export * from './defer.service';
 export * from './concat.service';
+export * from './merge.service'

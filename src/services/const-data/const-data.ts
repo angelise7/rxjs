@@ -50,7 +50,7 @@ export const CREATE_OPERATOR: Array<OPERATOR> = [{
 }, {
   name: 'interval/timer',
   type: '静态',
-  value: '类似JS的setTimeout和setInterval',
+  value: '类似JS的setInterval',
   fun: 'interval(number)',
   introduce: '',
   operation: false,
@@ -81,8 +81,15 @@ export const COMBINATION_OPERATOR: Array<OPERATOR> = [{
   name: 'concat',
   type: '动态/静态',
   value: '合并多个数据流,有静态和动态两个操作符,可以无限拼接,只有在上一个Observable完结才能拼接',
-  fun: '',
+  fun: 'concat(observable1$,observable12$,...)/observable1$.concat(observable2$,...)',
   introduce: '',
+  operation: false,
+}, {
+  name: 'merge',
+  type: '动态/静态',
+  value: '合并多个数据流,采取先到先得的策略,只有所有Observable完结才会完结',
+  fun: 'merge(observable1$,observable12$,...,number)/observable1$.merge(observable2$,...,number)',
+  introduce: '主要运用于异步数据的合并,number:合并的Observable数量',
   operation: false,
 }]
 
