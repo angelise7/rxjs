@@ -105,6 +105,27 @@ export const COMBINATION_OPERATOR: Array<OPERATOR> = [{
   fun: 'combineLatest(observable1$,observable12$,...)/observable1$.combineLatest(observable2$,...)',
   introduce: '',
   operation: false,
+}, {
+  name: 'race',
+  type: '动态/静态',
+  value: '谁先产生数据,就吐出谁的数据给下游,其余的退订',
+  fun: 'race(observable1$,observable12$,...)/observable1$.race(observable2$,...)',
+  introduce: '',
+  operation: false,
+}, {
+  name: 'startWith',
+  type: '动态',
+  value: '订阅时,优先吐出若干个数据',
+  fun: '',
+  introduce: '',
+  operation: false,
+}, {
+  name: 'forkJoin',
+  type: '静态',
+  value: '类似Promise.all 所有Observable完结后,吐出最后一组数据给下游',
+  fun: '',
+  introduce: '',
+  operation: false,
 }]
 
 export interface OPERATOR {
