@@ -1,0 +1,16 @@
+<div style="background: #ECECEC;padding:30px;">
+  <nz-card [nzBordered]="false" nzTitle="创建类操作符">
+    <nz-collapse>
+      <nz-collapse-panel *ngFor="let item of createOperator" [nzHeader]="item.name" [nzExtra]="extraTpl">
+        <p>{{item.value}}</p>
+        <nz-divider *ngIf="item.fun"></nz-divider>
+        <p>{{item.fun}}</p>
+        <p>{{item.introduce}}</p>
+
+        <ng-template #extraTpl>
+          {{item.type}}
+        </ng-template>
+      </nz-collapse-panel>
+    </nz-collapse>
+  </nz-card>
+</div>
