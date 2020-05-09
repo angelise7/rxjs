@@ -87,9 +87,16 @@ export const COMBINATION_OPERATOR: Array<OPERATOR> = [{
 }, {
   name: 'merge',
   type: '动态/静态',
-  value: '合并多个数据流,采取先到先得的策略,只有所有Observable完结才会完结',
+  value: '合并多个数据流,采取先到先得的策略,只有所有Observable完结才会完结,主要运用于异步数据的合并',
   fun: 'merge(observable1$,observable12$,...,number)/observable1$.merge(observable2$,...,number)',
-  introduce: '主要运用于异步数据的合并,number:合并的Observable数量',
+  introduce: 'number:合并的Observable数量',
+  operation: false,
+}, {
+  name: 'zip',
+  type: '动态/静态',
+  value: '一对一的合并多个Observable中的的数据流,只有满足所有Observable的条件时才开始吐出合并数据;当一个数据流完结时,结束所有的数据流',
+  fun: 'zip(observable1$,observable12$,...)/observable1$.zip(observable2$,...)',
+  introduce: '',
   operation: false,
 }]
 
