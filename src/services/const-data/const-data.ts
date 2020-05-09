@@ -40,4 +40,10 @@ export const CREATE_OPERATOR = [{
   value: '类似JS的setTimeout和setInterval',
   fun: 'interval(number)',
   introduce: ''
+}, {
+  name: 'from',
+  type: '静态',
+  value: '将任何类似Observable的都转为一个实际的Observable',
+  fun: 'from(x)',
+  introduce:'x:数组,类似数,或者promise'
 }]

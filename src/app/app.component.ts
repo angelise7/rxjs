@@ -7,6 +7,7 @@ import {
   RepeatService,
   EmptyNeverThrowService,
   IntervalTimerService,
+  FromService,
 } from '../services/rxjs'
 
 @Component({
@@ -19,7 +20,7 @@ export class AppComponent {
   createOperator = CREATE_OPERATOR;
 
   constructor(
-    intervalTimerService: IntervalTimerService,
+    FromService: FromService,
   ) {
 
   }
