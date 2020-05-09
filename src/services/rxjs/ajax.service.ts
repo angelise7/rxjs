@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs'
-import { ajax } from 'rxjs/ajax';
+import { ajax, AjaxResponse } from 'rxjs/ajax';
 
 @Injectable({
   providedIn: 'root'
@@ -8,16 +8,18 @@ import { ajax } from 'rxjs/ajax';
 export class AjaxService {
 
   constructor() {
+
+  }
+
+  operation(): Observable<AjaxResponse> {
     const url = 'https://testphpmallapi.zsis.net/index.php/tool/Task/getUnReadCount';
     const type = 'post';
 
-    this.ajaxJson(url, type).subscribe(r => {
-      console.log(r)
-    })
+    return this.ajaxJson(url, type)
   }
 
 
-  ajaxJson(url, type, data = {}) {
+  ajaxJson(url, type, data = {}): Observable<AjaxResponse> {
     const config = {
       url: url,
       method: type,

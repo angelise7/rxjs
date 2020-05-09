@@ -9,6 +9,7 @@
 
         <ng-template #extraTpl>
           {{item.type}}
+          <button *ngIf="item.operation" nz-button nzSize="small" (click)="handleOperation()">operation</button>
         </ng-template>
       </nz-collapse-panel>
     </nz-collapse>

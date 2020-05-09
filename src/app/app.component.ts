@@ -8,7 +8,7 @@ import {
   EmptyNeverThrowService,
   IntervalTimerService,
   FromService,
-  AjaxService,
+  DeferService,
 } from '../services/rxjs'
 
 @Component({
@@ -21,12 +21,16 @@ export class AppComponent {
   createOperator = CREATE_OPERATOR;
 
   constructor(
-    AjaxService: AjaxService,
+    private deferService: DeferService,
   ) {
-
   }
 
   ngOnInit(): void {
+  }
 
+  handleOperation() {
+    this.deferService.operation().subscribe(r => {
+      console.log(r)
+    })
   }
 }
