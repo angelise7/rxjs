@@ -20,7 +20,7 @@ export class AppComponent {
   createOperator = CREATE_OPERATOR;
 
   constructor(
-    FromService: FromService,
+    RepeatService: RepeatService,
   ) {
 
   }

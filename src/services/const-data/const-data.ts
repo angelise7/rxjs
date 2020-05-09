@@ -29,6 +29,12 @@ export const CREATE_OPERATOR = [{
   fun: 'repeat(num)',
   introduce: 'num:重复的次数'
 }, {
+  name: 'repeatWhen',
+  type: '动态',
+  value: '类似repeat的功能',
+  fun: 'repeatWhen(fun)',
+  introduce: 'fun:需要一个返回Observable的函数'
+}, {
   name: 'empty/throwError/never',
   type: '静态',
   value: '分别产生一个空数据/抛出错误/什么也不做',
@@ -45,5 +51,5 @@ export const CREATE_OPERATOR = [{
   type: '静态',
   value: '将任何类似Observable的都转为一个实际的Observable',
   fun: 'from(x)',
-  introduce:'x:数组,类似数,或者promise'
+  introduce: 'x:数组,类似数,或者promise'
 }]
