@@ -34,4 +34,10 @@ export const CREATE_OPERATOR = [{
   value: '分别产生一个空数据/抛出错误/什么也不做',
   fun: 'empty()/throwError(new Error(error))/never()',
   introduce: ''
+}, {
+  name: 'interval/timer',
+  type: '静态',
+  value: '类似JS的setTimeout和setInterval',
+  fun: 'interval(number)',
+  introduce: ''
 }]
