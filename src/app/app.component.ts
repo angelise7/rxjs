@@ -13,6 +13,7 @@ import {
   MergeService,
   ZipService,
   CombineLatestService,
+  RefCountService,
 } from '../services/rxjs'
 
 @Component({
@@ -26,7 +27,7 @@ export class AppComponent {
   combinationOperator: Array<OPERATOR> = COMBINATION_OPERATOR;
 
   constructor(
-    private CombineLatestService: CombineLatestService,
+    private RefCountService: RefCountService,
   ) {
   }
 

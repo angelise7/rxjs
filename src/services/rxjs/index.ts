@@ -11,3 +11,4 @@ export * from './concat.service';
 export * from './merge.service';
 export * from './zip.service';
 export * from './combine-latest.service';
+export * from './ref-count.service';
